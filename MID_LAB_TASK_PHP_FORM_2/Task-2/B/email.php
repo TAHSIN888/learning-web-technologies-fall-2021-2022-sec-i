@@ -1,8 +1,11 @@
 <?php 
-
-	if(isset($_REQUEST['submit']))
-	{
+    if(isset($_REQUEST['submit'])){
 		$email = $_REQUEST['myemail'];
+		if($email != ""){
+			echo $email;
+		}else{
+			echo "Null value...";
+		}
 	}
 
 ?>
@@ -16,7 +19,7 @@
 	<form method="post" >
 		<fieldset>
 			<legend>EMAIL</legend>
-		email: <input type="text" name="myemail" value="<?php if(isset($email)){ echo $email; }?>"/>
+		email: <input type="text" name="myemail" value=""/>
 		<input type="submit" name="submit" value="Submit">
 		</fieldset>
 	</form>
