@@ -10,7 +10,9 @@
 <?php
 
 
- 
+ $dateofbirthErr = "";
+
+$dateofbirth = "";
     
   if (empty($_POST["birthday"])) 
   {
